@@ -1,3 +1,5 @@
+import { useContext, useEffect } from "react";
+import { ProgressContext } from "../../App";
 import Banner from "./Banner";
 import Brands from "./Brands";
 import ClientReview from "./ClientReview";
@@ -7,6 +9,12 @@ import RecentWork from "./RecentWork";
 import Service from "./Service";
 
 const Home = () => {
+  const [, setProgress] = useContext(ProgressContext);
+
+  useEffect(() => {
+    setProgress(100);
+  }, [setProgress]);
+
   return (
     <div>
       <Banner />

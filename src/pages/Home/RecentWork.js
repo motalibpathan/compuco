@@ -28,7 +28,7 @@ const RecentWork = () => {
           Recent work
         </h1>
         <img
-          className="md:w-full w-56"
+          className="md:w-96 w-56"
           src="https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/61235570c731b2f7c0a09bad_Underline-02.svg"
           alt=""
         />

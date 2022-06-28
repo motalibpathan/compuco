@@ -19,7 +19,7 @@ const Banner = () => {
           <h1 className="md:text-6xl text-4xl  font-poppins font-bold leading-tight ">
             <span className="z-10 relative">you work for good</span>
             <img
-              className="ml-44 -mt-3 z-0 relative w-40"
+              className="md:ml-[340px] ml-44 -mt-3 z-0 relative md:w-52 w-40"
               src="https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/61235570c731b2f7c0a09bad_Underline-02.svg"
               alt=""
             />

@@ -8,7 +8,7 @@ const ContactBox = () => {
             src="https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/616fb7698cab07cff9b46d6f_Pic-p-500.png"
             alt=""
           />
-          <div className="text-center md:order-2 order-1">
+          <div className="md:text-left text-center md:order-2 order-1">
             <h1 className="text-3xl mb-2 ">Address</h1>
             <p> Compuco, </p>
             <p>Hope House Suite 16, Perseverance Works</p>
