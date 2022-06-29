@@ -7,6 +7,7 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Footer from "./pages/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Navbar from "./pages/Navbar/Navbar";
+import WhatWeDo from "./pages/WhatWeDp/WhatWeDo";
 
 export const ProgressContext = createContext(0);
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
       </Routes>
       <Footer />
     </ProgressContext.Provider>

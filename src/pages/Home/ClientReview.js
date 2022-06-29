@@ -1,4 +1,8 @@
+import { useState } from "react";
+import ReactVisibilitySensor from "react-visibility-sensor";
+
 const ClientReview = () => {
+  const [visible, setVisible] = useState(false);
   const reviews = [
     {
       id: 1,
@@ -27,9 +31,18 @@ const ClientReview = () => {
             alt=""
           />
         </div>
-        <h1 className="md:text-4xl text-3xl font-bold font-poppins text-center mb-5">
-          What our clients say
-        </h1>
+        <ReactVisibilitySensor
+          partialVisibility
+          onChange={(v) => setVisible(v)}
+        >
+          <h1
+            className={`md:text-5xl text-3xl font-bold font-poppins text-center mb-14  ${
+              visible ? "opacity-100 translate-y-0" : "translate-y-10 opacity-0"
+            } duration-1000`}
+          >
+            What our clients say
+          </h1>
+        </ReactVisibilitySensor>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
           {reviews.map((review) => (
             <div
