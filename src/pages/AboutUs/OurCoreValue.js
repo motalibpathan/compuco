@@ -39,7 +39,7 @@ const OurCoreValue = () => {
           alt=""
         />
         <h1 className="text-4xl font-bold font-poppins">Our Core Value</h1>
-        <p className="mt-5 mb-10 w-96 mx-auto font-work">
+        <p className="mt-5 mb-10 lg:w-96 w-full mx-auto font-work">
           Our dedicated team are driven by three core values that underpin
           everything we do.
         </p>

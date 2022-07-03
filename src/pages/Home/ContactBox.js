@@ -1,6 +1,14 @@
 const ContactBox = () => {
   return (
-    <div className="bg-[#12243b]">
+    <div
+      style={{
+        backgroundImage:
+          "url(https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/6239bc0690d29f397f70abcb_contact-cta-bg-01.svg)",
+        backgroundRepeat: "no-repeat",
+        backgroundPositionX: "100%",
+      }}
+      className="bg-[#12243b]"
+    >
       <div className="mt-24 max-w-[1140px] mx-auto w-full md:px-10 px-5 py-10 grid md:grid-cols-2 grid-cols-1 space-y-5">
         <div className="text-white font-work md:order-1 order-2 flex flex-col items-center md:mt-0 mt-10">
           <img

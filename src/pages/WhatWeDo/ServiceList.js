@@ -71,7 +71,7 @@ const ServiceList = () => {
           alt=""
         />
         <h1 className="text-4xl font-bold font-poppins">Services we offer</h1>
-        <p className="mt-5 mb-10 w-96 mx-auto font-work">
+        <p className="mt-5 mb-10 md:w-96 w-full mx-auto font-work">
           We underpin these technologies with the experience that counts to
           deliver for you both now and in future.
         </p>

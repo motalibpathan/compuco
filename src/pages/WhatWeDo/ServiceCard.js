@@ -1,9 +1,9 @@
 const ServiceCard = ({ work }) => {
   const { id, title, description, illustration, technologies } = work;
   return (
-    <div className="flex justify-center items-start gap-x-20 font-work my-14">
+    <div className="md:flex justify-center items-start gap-x-20 font-work my-14 p-5">
       <div className={`md:w-1/2 w-full ${id % 2 === 0 && "order-2"}`}>
-        <h1 className="text-3xl font-bold text-gray-700 mb-5 font-poppins">
+        <h1 className="md:text-3xl text-2xl font-bold text-gray-700 mb-5 font-poppins">
           {title}
         </h1>
         <p className="text-lg">{description}</p>

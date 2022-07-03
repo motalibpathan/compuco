@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const brandsLogo = [
     "https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/6239ab03b23829deb04b59ce_MemberWise.svg",
@@ -58,11 +60,21 @@ const Footer = () => {
             <div>
               <h1 className="text-xl font-poppins font-bold mb-5">Company</h1>
               <ul className="space-y-5">
-                <li>About Us</li>
-                <li>What we do</li>
-                <li>Portfolio</li>
-                <li>Blog</li>
-                <li>Careers</li>
+                <li>
+                  <Link to="/about-us">About Us</Link>
+                </li>
+                <li>
+                  <Link to="/what-we-do">What we do</Link>
+                </li>
+                <li>
+                  <Link to="/portfolio">Portfolio</Link>
+                </li>
+                <li>
+                  <Link to="/blog">Blog</Link>
+                </li>
+                <li>
+                  <Link to="/company-culture">Careers</Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -71,12 +83,14 @@ const Footer = () => {
                 <li>Privacy policy</li>
                 <li>Cookie policy</li>
                 <li>Modern slavery statement</li>
-                <li>Contact us</li>
+                <li>
+                  <Link to="/contact-us">Contact</Link>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <p className="text-center p-7 border-2 border-t text-gray-600 font-work">
+        <p className="text-center p-7 border-t-2 text-gray-600 font-work">
           © 2022, Compucorp Ltd. trading as Compuco. All Rights Reserved
         </p>
       </div>

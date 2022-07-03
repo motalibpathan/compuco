@@ -1,15 +1,13 @@
-import { useContext, useEffect } from "react";
-import { ProgressContext } from "../../App";
+import { useRef } from "react";
+import useProgress from "../../hooks/useProgress";
 import ContactBox from "../Home/ContactBox";
 
 const ContactUs = () => {
-  const [, setProgress] = useContext(ProgressContext);
-  useEffect(() => {
-    setProgress(100);
-  }, [setProgress]);
+  const contactUsRef = useRef(null);
+  useProgress(contactUsRef);
 
   return (
-    <>
+    <div ref={contactUsRef}>
       <div className="md:mt-14 mt-0 max-w-[1140px] mx-auto w-full">
         <div className="md:w-4/5 w-full mx-auto md:flex justify-center items-center p-5">
           <div className="md:w-3/5 w-full mb-5 md:mb-0">
@@ -65,7 +63,7 @@ const ContactUs = () => {
         </div>
       </div>
       <ContactBox />
-    </>
+    </div>
   );
 };
 

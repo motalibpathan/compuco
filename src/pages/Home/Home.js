@@ -1,30 +1,26 @@
-import { useContext, useEffect } from "react";
-import { ProgressContext } from "../../App";
+import { useRef } from "react";
+import useProgress from "../../hooks/useProgress";
 import Banner from "./Banner";
 import Brands from "./Brands";
 import ClientReview from "./ClientReview";
 import ContactBox from "./ContactBox";
-import News from "./News";
+import NewsAndInsights from "./NewsAndInsights";
 import RecentWork from "./RecentWork";
 import Service from "./Service";
 
 const Home = () => {
-  const [, setProgress] = useContext(ProgressContext);
-
-  useEffect(() => {
-    setProgress(100);
-  }, [setProgress]);
+  const homePageRef = useRef(null);
+  useProgress(homePageRef);
 
   return (
-    <div>
+    <div ref={homePageRef}>
       <Banner />
       <Service />
       <Brands />
       <ClientReview />
-      <RecentWork />
-      <News />
+      <RecentWork show={3} />
+      <NewsAndInsights />
       <ContactBox />
-      <div className="mb-24"></div>
     </div>
   );
 };

@@ -1,20 +1,21 @@
-import { useContext, useEffect } from "react";
+import { useRef } from "react";
 import ReactVisibilitySensor from "react-visibility-sensor";
-import { ProgressContext } from "../../App";
+import useProgress from "../../hooks/useProgress";
+import Container from "../Shared/Container";
 import GetInTouch from "../Shared/GetInTouch";
 import OurCoreValue from "./OurCoreValue";
 
 const AboutUs = () => {
-  const [, setProgress] = useContext(ProgressContext);
-  useEffect(() => {
-    setProgress(100);
-  }, [setProgress]);
-
+  const aboutUsRef = useRef(null);
+  useProgress(aboutUsRef);
   return (
     <>
-      <div className="md:mt-14 mt-5 max-w-[1140px] mx-auto w-full">
-        <div className="w-full mx-auto md:flex justify-center items-center md:overflow-visible overflow-hidden">
-          <ReactVisibilitySensor>
+      <Container>
+        <div
+          className="w-full mx-auto md:flex justify-center items-center md:overflow-visible overflow-hidden"
+          ref={aboutUsRef}
+        >
+          <ReactVisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <>
                 <div
@@ -24,16 +25,21 @@ const AboutUs = () => {
                       : "-translate-x-24 opacity-0"
                   } duration-1000`}
                 >
-                  <h1 className="md:text-6xl text-4xl font-poppins font-bold leading-tight ">
+                  <h1 className="md:text-6xl text-3xl font-poppins font-bold leading-tight ">
                     Changing the way{" "}
                   </h1>
-                  <h1 className="md:text-6xl text-4xl  font-poppins font-bold leading-tight ">
-                    <span className="z-10 relative">you work for good</span>
-                    <img
-                      className="md:ml-[340px] ml-44 -mt-3 z-0 relative md:w-52 w-40 "
-                      src="https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/61235570c731b2f7c0a09bad_Underline-02.svg"
-                      alt=""
-                    />
+                  <h1 className="md:text-6xl text-3xl  font-poppins font-bold leading-tight ">
+                    <span
+                      style={{
+                        backgroundImage:
+                          "url(https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/61235570c731b2f7c0a09bad_Underline-02.svg)",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "100% 100%",
+                      }}
+                      className="z-10 relative"
+                    >
+                      you work for good
+                    </span>
                   </h1>
                 </div>
                 <div
@@ -145,7 +151,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-      </div>
+      </Container>
       <OurCoreValue />
       <GetInTouch />
     </>

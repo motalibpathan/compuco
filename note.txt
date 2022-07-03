@@ -1,2 +1,7 @@
-<ReactVisibilitySensor> {({ isVisible }) => ( <> </>  )}
+<ReactVisibilitySensor partialVisibility> {({ isVisible }) => ( <> </>  )}
 </ReactVisibilitySensor>
+
+const [, setProgress] = useContext(ProgressContext);
+  useEffect(() => {
+    setProgress(100);
+  }, [setProgress]);
