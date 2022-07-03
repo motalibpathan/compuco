@@ -1,6 +1,7 @@
 const ContactBox = () => {
   return (
     <div
+      id="contact"
       style={{
         backgroundImage:
           "url(https://uploads-ssl.webflow.com/61235570c731b23718a09b6a/6239bc0690d29f397f70abcb_contact-cta-bg-01.svg)",

@@ -13,10 +13,10 @@ export const useOnLoadImages = (ref) => {
     if (!ref?.current) return;
 
     const imagesLoaded = Array.from(ref.current.querySelectorAll("img"));
-    console.log(
-      "🚀 ~ file: useOnLoadImages.js ~ line 16 ~ useEffect ~ ref.current.querySelectorAll('img')",
-      ref.current.querySelectorAll("img")
-    );
+    // console.log(
+    //   "🚀 ~ file: useOnLoadImages.js ~ line 16 ~ useEffect ~ ref.current.querySelectorAll('img')",
+    //   ref.current.querySelectorAll("img")
+    // );
 
     if (imagesLoaded.length === 0) {
       setStatus(true);

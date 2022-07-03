@@ -4,12 +4,18 @@ const Banner = () => {
   const [visible, setVisible] = useState(false);
   const button = (
     <div className="w-full flex md:flex-row flex-col gap-y-3 mt-10 items-center">
-      <button className="px-12 py-3 bg-gradient-to-r from-[#00fff7] to-[#25ffd0] rounded-lg mr-5">
+      <a
+        href="#portfolio"
+        className="px-12 py-3 bg-gradient-to-r from-[#00fff7] to-[#25ffd0] rounded-lg mr-5"
+      >
         Portfolio
-      </button>
-      <button className="px-12 py-3 border border-black hover:border-[#0bdaad] hover:text-[#0bdaad] rounded-lg mr-5">
+      </a>
+      <a
+        href="#contact"
+        className="px-12 py-3 border border-black hover:border-[#0bdaad] hover:text-[#0bdaad] rounded-lg mr-5"
+      >
         Lets Talk
-      </button>
+      </a>
     </div>
   );
 

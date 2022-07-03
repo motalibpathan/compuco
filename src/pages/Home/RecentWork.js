@@ -34,7 +34,7 @@ const RecentWork = ({ show }) => {
     },
   ];
   return (
-    <div className="mt-24 max-w-[1140px] mx-auto w-full px-10">
+    <div id="portfolio" className="mt-24 max-w-[1140px] mx-auto w-full px-10">
       <div>
         <h1
           className={`md:text-5xl text-3xl font-poppins font-bold ${
